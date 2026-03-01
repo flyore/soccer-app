@@ -31,6 +31,8 @@ export default function SignupPage() {
       });
       if (signupError) { setError(signupError.message); return; }
       setMessage('가입 완료! 이메일을 확인해 주세요.');
+      setTimeout(() => { window.location.href = '/login'; }, 2000);
+
     } catch (err: any) {
       setError(err.message);
     } finally {
